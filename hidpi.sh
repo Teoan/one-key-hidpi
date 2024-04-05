@@ -325,7 +325,7 @@ function init() {
     fi
 
     # Check if monitor was found
-    if [[ -z $VendorID || -z $ProductID || $VendorID == 0 || $ProductID == 0 ]]; then
+    if [[ -z $VendorID || -z $ProductID || ($VendorID == 0 && $ProductID == 0) ]]; then
         echo "$langNoMonitFound"
         exit 2
     fi
